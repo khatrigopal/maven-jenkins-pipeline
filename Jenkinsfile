@@ -27,7 +27,7 @@ pipeline {
                   withSonarQubeEnv('SonarQube') {
            sh "mvn sonar:sonar \
                         -Dsonar.projectKey=maven-jenkins-pipeline \
-                        -Dsonar.projectName='maven-jenkins-pipeline' 
+                        -Dsonar.projectName='maven-jenkins-pipeline' \
                         
                 }
            
