@@ -26,9 +26,8 @@ pipeline {
       stage('Sonarqube Analysis - SAST') {
             steps {
                   withSonarQubeEnv('SonarQube') {
-           sh "mvn sonar:sonar \
-                            -Dsonar.projectKey=maven-jenkins-pipeline \
-                        -Dsonar.host.url=http://34.173.74.192:9000"
+           sh "mvn sonar:sonar 
+                           
 
 
                 }
