@@ -27,6 +27,7 @@ pipeline {
       stage('Sonarqube Analysis - SAST') {
             steps {
                   withSonarQubeEnv('SonarQube') {
+                    def scannerHome = tool 'SonarScanner 4.0';
            sh "mvn sonar:sonar" 
                            
 
