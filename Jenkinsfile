@@ -24,7 +24,7 @@ pipeline {
 
     stage('Sonarqube Analysis - SAST') {
             steps {
-                  withSonarQubeEnv('SonarQube') {
+                  
            sh "mvn clean verify sonar:sonar \
   -Dsonar.projectKey=maven-jenkins-pipeline \
   -Dsonar.projectName='maven-jenkins-pipeline' \
@@ -34,7 +34,7 @@ pipeline {
                       script {
                         waitForQualityGate abortPipeline: true
                     }
-                }
+                
               }
         }
         
