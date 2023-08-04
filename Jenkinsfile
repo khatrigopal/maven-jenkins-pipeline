@@ -25,10 +25,10 @@ pipeline {
         
 
       stage('Sonarqube Analysis - SAST') {
-            steps {
                   withSonarQubeEnv('SonarQube') {
-                    def scannerHome = tool 'SonarScanner 4.0';
-           sh "mvn sonar:sonar" 
+           sh "mvn sonar:sonar \
+                              -Dsonar.projectKey=maven-jenkins-pipeline \
+                        -Dsonar.host.url=http://34.173.74.192:9000" 
                            
 
 
