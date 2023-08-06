@@ -4,6 +4,7 @@ pipeline {
         maven "maven"
    }
 
+stages {
   stage('Sonarqube Analysis - SAST') {
             steps {
                   withSonarQubeEnv('SonarQube') {
@@ -14,7 +15,7 @@ pipeline {
            
               }
         }
-  stages {
+
       stage('Build Artifact') {
             steps {
               sh "mvn clean package -DskipTests=true"
