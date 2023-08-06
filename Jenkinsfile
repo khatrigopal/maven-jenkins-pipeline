@@ -9,7 +9,7 @@ pipeline {
                   withSonarQubeEnv('SonarQube') {
            sh "mvn sonar:sonar \
                               -Dsonar.projectKey=maven-jenkins-pipeline \
-                        -Dsonar.host.url=http://172.17.0.2:9000" (we need to user here sonarqube container ip)
+                        -Dsonar.host.url=http://172.17.0.2:9000"
                 }
            
               }
